@@ -21,40 +21,34 @@ class PersonnalBox extends StatelessWidget {
     final unitPart = parts.length > 1 ? parts[1] : '';
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
         color: color,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            spreadRadius: 1,
-            blurRadius: 10,
-            offset: const Offset(0, 3),
-          ),
-        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(title,
-              style: GoogleFonts.raleway(
-                fontSize: 17,
-                fontWeight: FontWeight.normal,
-              )),
+          Text(
+            title,
+            style: GoogleFonts.raleway(
+              fontSize: 16,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
           const SizedBox(height: 2.0),
           RichText(
             text: TextSpan(
-              style: const TextStyle(color: Colors.black, fontSize: 20.0),
+              style: const TextStyle(color: Colors.black, fontSize: 18.0),
               children: [
                 TextSpan(
                   text: numericPart,
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style:  GoogleFonts.rubik(fontWeight: FontWeight.w500),
                 ),
                 TextSpan(
                   text: ' $unitPart',
-                  style: const TextStyle(
+                  style:  GoogleFonts.rubik(
                     fontWeight: FontWeight.w400,
                     fontSize: 16.0,
                   ),
